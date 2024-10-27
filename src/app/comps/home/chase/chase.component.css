@@ -1,0 +1,30 @@
+.head
+{
+    background: #82aaff11;
+}
+.bankName
+{
+    vertical-align: middle;
+}
+/* .bankName .name
+{
+    line-height: 10px;
+} */
+.bankName .name p:nth-child(1)
+{
+    color: var(--dbcol);
+}
+.bankName .name p:nth-child(2)
+{
+    color: var(--bcol);
+}
+.bankName .name p:nth-child(2)::before
+{
+    content: '$';
+}
+.savings .text
+{
+    background: #00ff2f15;
+    color: green;
+    cursor: pointer;
+}

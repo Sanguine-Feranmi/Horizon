@@ -1,0 +1,15 @@
+.tHeader
+{
+    background-color: var(--bgfade);
+}
+.tImg .icon
+{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.tImg span
+{
+    padding-left: 10px;
+}

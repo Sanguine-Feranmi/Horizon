@@ -1,0 +1,60 @@
+<div class="container-fluid d-flex col-lg-12">
+    <div class="dashboard  flex-column gap-3 d-flex vh-100 col-lg-8 px-5 py-3">
+        <div class="d-flex flex-column gap-4 col-lg-12">
+            <div class="dashWT lh-1">
+                <p class="fs-2 welcome fw-medium"> Welcome, <span class="name fw-semibold">{{name}}!</span></p>
+                <p>Access & Manage your Account and Transactions efficiently</p>
+           </div>
+           <div class="addbank">
+            <div class="container d-flex gap-3  rounded-4 col-lg-12 justify-content-between p-3 align-top">
+                <div class="balProg d-flex gap-3 align-items-center">
+                    <div class="bal">
+                        <div class="overlay"></div>
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="balTxt d-flex flex-column gap-3">
+                        <div class="">
+                            <p class="fw-semibold"><span> {{NBA}} </span>Bank Account(s)</p>
+                        </div>
+                        <div class=" currentBal">
+                            <p class="fw-normal fs-6">Total Current Balance</p>
+                            <p class="fs-2 fw-semibold  "> {{curBal}} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="addbtn">
+                    <a class="fs-5 fw-medium text-decoration-none"> + Add Bank</a>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="d-flex flex-column gap-1">
+            <div class="d-flex px-0 pt-3 pb-0 align-items-center justify-content-between">
+                <div class="">
+                    <p class="fs-3 m-0">Recent Transactions</p>
+                </div>
+                <div class="">
+                    <p class="rounded-2 px-2 py-1 border-1 border">View all</p>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3 p-2">
+                <div class="bank-container align-items-center">
+                    <ul class="bank-item d-flex gap-5 p-0 m-0">
+                      <li [class.active]="selectedTab === 'chase'" (click)="selectTab('chase')">{{chase}}</li>
+                      <li [class.active]="selectedTab === 'boa'" (click)="selectTab('boa')">Bank of America</li>
+                      <li [class.active]="selectedTab === 'platypus'" (click)="selectTab('platypus')">First Platypus Bank</li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                  <app-chase [name]="name" [chase] = "chase" [NBA] = "NBA" [curBal] = "curBal" *ngIf="selectedTab === 'chase'"></app-chase>
+                  <app-bank-of-america *ngIf="selectedTab === 'boa'"></app-bank-of-america>
+                  <app-platypus *ngIf="selectedTab === 'platypus'"></app-platypus>
+                </div>
+            </div>
+        </div>
+        <div class="">
+
+        </div>
+    </div>
+</div>

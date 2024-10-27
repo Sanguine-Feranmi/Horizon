@@ -1,0 +1,170 @@
+.welcome .name
+{
+    /* color: #0D6EFD; */
+    color: var(--bcol);
+
+}
+.addbank .container
+{
+    box-shadow:  2px 2px 5px 1px rgba(128, 128, 128, 0.42);
+}
+.bal {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 100px;
+    /* box-shadow: 2px 2px 2px 2px #1e4888; */
+  }
+  /* .progress::after {
+    content: "%";
+  } */
+  .bal .title {
+    /* position: relative; */
+    z-index: 100;
+  }
+  .bal .overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .bal .left,
+  .bal .right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 15px solid var(--bcol);
+    border-radius: 100px 0px 0px 100px;
+    border-right: 0;
+    transform-origin: right;
+}
+
+.bal .left {
+    animation: load1 1s linear forwards;
+  }
+  .bal:nth-of-type(2) .right,
+  .bal:nth-of-type(3) .right {
+    animation: load2 0.5s linear forwards 1s;
+  }
+  .bal:last-of-type .right,
+  .bal:first-of-type .right {
+    animation: load3 0.8s linear forwards 1s;
+    /* color: #000; */
+  }
+  @keyframes load1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes load2 {
+    0% {
+      z-index: 100;
+      transform: rotate(180deg);
+    }
+    100% {
+      z-index: 100;
+      transform: rotate(270deg);
+    }
+}
+@keyframes load3 {
+    0% {
+      z-index: 100;
+      transform: rotate(180deg);
+    }
+    100% {
+        /* background: #000; */
+        /* color: #000; */
+      z-index: 100;
+      transform: rotate(315deg);
+    }
+  }
+.currentBal
+{
+    line-height: 15px;
+}
+.currentBal p:nth-child(1)
+{
+    color: grey;
+}
+.currentBal p:nth-child(2)::before
+{
+    content: '$';
+}
+.addbtn p
+{
+    color: #0D6EFD;
+    cursor: pointer;
+    
+}
+.bank-container {
+  border-bottom: 1px solid #e0e0e0;
+}
+.bank-container ul
+{
+  list-style: none;
+}
+.bank-item li {
+  font-size: 16px;
+  margin: 0;
+  padding:2px 0px;
+  color: #777; /* Gray color for unselected banks */
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.bank-item li:hover {
+  color: #1a73e8; /* Lighter blue color on hover */
+}
+
+.bank-item li.active {
+  color: #1a73e8; /* Blue color for the active bank */
+  font-weight: 500;
+}
+
+.bank-item li.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 2px;
+  background-color: #1a73e8; /* Blue underline */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+
+/* .tabs ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.tabs ul li {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.tabs ul li.active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.tab-content {
+  margin-top: 20px;
+} */

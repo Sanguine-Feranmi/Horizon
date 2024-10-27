@@ -1,0 +1,10 @@
+.side
+{
+    border-right: 1px solid grey;
+}
+@media screen and (max-width: 1100px) {
+    .side
+    {
+        width: 30%;
+    }
+}

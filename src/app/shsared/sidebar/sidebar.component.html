@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <!-- logo and search -->
+         <div class="">
+            <div class=" mb-4">
+                <!-- <img src="assets/logo.png" alt="Horizon Logo" style="height: 40px;"> -->
+                <h1 class="h3 mt-3"> <span class="text-primary"><i class="fas fa-box"></i></span> Horizon</h1>
+                <div class="search align-middle mt-3">
+                    <span class="text-primary searchIcon position-absolute ms-3"><i class="fas fa-search"></i></span>
+                    <input type="search" placeholder="Search" class="ps-5 p-2 rounded-3 border">
+                </div>
+              </div>
+         </div>
+         <!-- nav links -->
+          <div class="">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link py-2 fs-6 fw-medium rounded px-2 mb-3" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{'active': activePath === path}" (click)="setActivePath(path)">
+                    <i class="fa fa-home pe-2"></i> Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-2 fs-6 fw-medium rounded px-2 mb-3" routerLink="/mybank" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{'active': activePath === path}" (click)="setActivePath(path)">
+                    <i class="fa fa-bank pe-2"></i> My Bank
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-2 fs-6 fw-medium rounded px-2 mb-3" routerLink="/transactionhistory" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{'active': activePath === path}" (click)="setActivePath(path)">
+                    <i class="fa fa-history pe-2"></i> Transaction History
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-2 fs-6 fw-medium rounded px-2 mb-3" routerLink="/paymenttransfer" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{'active': activePath === path}" (click)="setActivePath(path)">
+                    <i class="fa fa-exchange-alt pe-2"></i> Payment Transfer
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-2 fs-6 fw-medium rounded px-2 mb-3" routerLink="/connectbank" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [ngClass]="{'active': activePath === path}" (click)="setActivePath(path)">
+                    <i class="fa fa-link pe-2"></i> Connect Bank
+                  </a>
+                </li>
+              </ul>
+              
+          </div>
+    </div>
+</div>
