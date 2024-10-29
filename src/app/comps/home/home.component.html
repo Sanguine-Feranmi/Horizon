@@ -1,8 +1,8 @@
-<div class="container-fluid d-flex col-lg-12">
-    <div class="dashboard  flex-column gap-3 d-flex vh-100 col-lg-8 px-5 py-3">
+<div class="container-fluid d-flex col-lg-12 p-0">
+    <div class="dashboard  flex-column gap-3 d-flex vh-100 col-lg-8 px-5 py-3 border-end">
         <div class="d-flex flex-column gap-4 col-lg-12">
             <div class="dashWT lh-1">
-                <p class="fs-2 welcome fw-medium"> Welcome, <span class="name fw-semibold">{{name}}!</span></p>
+                <p class="fs-2 welcome fw-medium"> Welcome, <span class="name fw-semibold">{{details.name}}!</span></p>
                 <p>Access & Manage your Account and Transactions efficiently</p>
            </div>
            <div class="addbank">
@@ -15,11 +15,11 @@
                     </div>
                     <div class="balTxt d-flex flex-column gap-3">
                         <div class="">
-                            <p class="fw-semibold"><span> {{NBA}} </span>Bank Account(s)</p>
+                            <p class="fw-semibold"><span> {{bankD.NBA}} </span>Bank Account(s)</p>
                         </div>
                         <div class=" currentBal">
                             <p class="fw-normal fs-6">Total Current Balance</p>
-                            <p class="fs-2 fw-semibold  "> {{curBal}} </p>
+                            <p class="fs-2 fw-semibold  "> {{bankD.curBal}} </p>
                         </div>
                     </div>
                 </div>
@@ -53,8 +53,37 @@
                 </div>
             </div>
         </div>
-        <div class="">
-
+    </div>
+    <div class="mastery d-flex flex-column w-100 position-relative">
+        <div class="grad"></div>
+        <div class="nonGrad w-100 px-2 pb-4 d-flex flex-column gap-2 position-absolute">
+            <div class="nImg">
+                <img src="figma-logo.png" alt="jspro" class="rounded-circle border border-4 border-white">
+            </div>
+            <div class="rName">
+                <p class="m-0 fw-medium fs-4"> {{details.fullname}} </p>
+                <p class="m-0 fst-italic"> {{details.mail}} </p>
+            </div>
+            <div class="bankCard w-100 py-4">
+                <div class="bcHead d-flex justify-content-between align-items-center">
+                    <p class="m-0 fs-5 fw-semibold">My Banks</p>
+                    <p class="m-0 fs-6 fw-normal"> + Add bank</p>
+                </div>
+                <div class="bCard">
+                    <div class="">
+                        <div class="bcTop">
+                            <p class="m-0"> {{bank.chase }} </p>
+                            <p class="m-0"></p>
+                        </div>
+                        <div class="bcBottom">
+                            <div class=""></div>
+                            <div class=""></div>
+                            <div class=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
 </div>

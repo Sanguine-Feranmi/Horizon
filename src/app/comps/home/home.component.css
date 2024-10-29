@@ -1,3 +1,7 @@
+.container-fluid
+{
+  overflow: hidden;
+}
 .welcome .name
 {
     /* color: #0D6EFD; */
@@ -19,11 +23,7 @@
     position: relative;
     text-align: center;
     line-height: 100px;
-    /* box-shadow: 2px 2px 2px 2px #1e4888; */
   }
-  /* .progress::after {
-    content: "%";
-  } */
   .bal .title {
     /* position: relative; */
     z-index: 100;
@@ -147,24 +147,19 @@
   transition: width 0.3s ease;
 }
 
-
-/* .tabs ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
+/* rightbar */
+.mastery .grad
+{
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(135deg, #b3d8ff, #c499ff, #f7c4e8);
 }
-
-.tabs ul li {
-  cursor: pointer;
-  padding: 10px 20px;
+.nonGrad
+{
+  margin-top: 110px;
 }
-
-.tabs ul li.active {
-  color: blue;
-  border-bottom: 2px solid blue;
+.nonGrad .nImg img
+{
+  width: 130px;
+  height: 130px;
 }
-
-.tab-content {
-  margin-top: 20px;
-} */
