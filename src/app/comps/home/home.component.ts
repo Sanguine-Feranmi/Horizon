@@ -16,16 +16,24 @@ export class HomeComponent {
   {
     name:'',
     NBA: 2,
-    curBal: 2698.12
+    curBal: 2698.12,
+    accNo: "1234 5678 9012"
   }
   bank: any =
   {
     chase: 'Chase Bank'
   }
+  profilepic: any ='figma-logo.png'
   chase: string = 'Chase Bank'
   NBA: number = 2;
   curBal: string = "2,698.12";
-
+  currentDate: Date;
+  expDate: any =
+  {
+    mm: 10,
+    yr: 25
+  }
+  
 
   banks: any [] = [
   'Chase Banks', 'Bank of America', 'First Platypus Bank'
@@ -42,4 +50,9 @@ export class HomeComponent {
  selectTab(tab: string) {
    this.selectedTab = tab;
  }
+
+
+  constructor() {
+    this.currentDate = new Date(); // Get the current date
+  }
 }

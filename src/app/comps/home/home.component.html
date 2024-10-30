@@ -69,20 +69,89 @@
                     <p class="m-0 fs-5 fw-semibold">My Banks</p>
                     <p class="m-0 fs-6 fw-normal"> + Add bank</p>
                 </div>
-                <div class="bCard">
-                    <div class="">
-                        <div class="bcTop">
-                            <p class="m-0"> {{bank.chase }} </p>
-                            <p class="m-0"></p>
+
+                <div class="bCard w-100 position-relative mt-4">
+                    <div class="bcTop d-flex flex-column text-white m-auto p-3 border border-2 rounded-4 position-relative">
+                      <!-- Overlay as background -->
+                      <div class="overlay1 position-absolute w-100 h-100 rounded-4 d-flex rounded-4">
+                        <div class="overl1 w-75 h-100 rounded-start-4 "></div>
+                        <div class="overl2 w-25 h-100 rounded-end-4"></div>
+                      </div>
+                      
+                      <div class="bcTopp d-flex w-100 p-0 align-items-center justify-content-between">
+                        <p class="m-0 fs-3 fw-bold z-1">{{ bank.chase }}</p>
+                        <p class="m-0 fs-3"><i class="fa fa-wifi"></i></p>
+                      </div>
+                  
+                      <div class="bcBottom d-flex align-items-center justify-content-between pb-3 m-0 w-100">
+                        <div class="col-lg-6">
+                          <p class="m-0 fs-3 fw-semibold ">{{ details.fullname }}</p>
+                          <p class="m-0 fs-4 ">{{ bankD.accNo }}</p>
                         </div>
-                        <div class="bcBottom">
-                            <div class=""></div>
-                            <div class=""></div>
-                            <div class=""></div>
+                        <div class="col-lg-4">
+                          <p class="m-0 fs-5 ">Exp Date</p>
+                          <p class="m-0 fs-6">{{ expDate.mm }}/{{ expDate.yr }}</p>
                         </div>
+                        <div class="col-lg-2">
+                          <div class="visa p-2 rounded-2 m-auto text-center">
+                            <p class="m-0">VISA</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
+            <div class="container mt-5">
+                <h2 class="fw-bold mb-4">My budgets</h2>
+              
+                <!-- Subscription Card -->
+                <div class="budget-card bg-light-blue d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div class="budget-icon bg-blue-light text-blue me-3">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Subscriptions</h6>
+                      <div class="progress bg-blue-light">
+                        <div class="progress-bar bg-blue" role="progressbar" style="width: 80%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-blue fw-bold">$25 left</span>
+                </div>
+              
+                <!-- Food and Booze Card -->
+                <div class="budget-card bg-light-pink d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div class="budget-icon bg-pink-light text-pink me-3">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Food and booze</h6>
+                      <div class="progress bg-pink-light">
+                        <div class="progress-bar bg-pink" role="progressbar" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-pink fw-bold">$120 left</span>
+                </div>
+              
+                <!-- Savings Card -->
+                <div class="budget-card bg-light-green d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div class="budget-icon bg-green-light text-green me-3">
+                      <i class="fa fa-wallet"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Savings</h6>
+                      <div class="progress bg-green-light">
+                        <div class="progress-bar bg-green" role="progressbar" style="width: 90%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-green fw-bold">$50 left</span>
+                </div>
+              </div>
         </div>
     </div>
     

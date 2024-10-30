@@ -4,9 +4,7 @@
 }
 .welcome .name
 {
-    /* color: #0D6EFD; */
-    color: var(--bcol);
-
+  color: var(--bcol);
 }
 .addbank .container
 {
@@ -25,7 +23,6 @@
     line-height: 100px;
   }
   .bal .title {
-    /* position: relative; */
     z-index: 100;
   }
   .bal .overlay {
@@ -59,7 +56,6 @@
   .bal:last-of-type .right,
   .bal:first-of-type .right {
     animation: load3 0.8s linear forwards 1s;
-    /* color: #000; */
   }
   @keyframes load1 {
     0% {
@@ -85,8 +81,6 @@
       transform: rotate(180deg);
     }
     100% {
-        /* background: #000; */
-        /* color: #000; */
       z-index: 100;
       transform: rotate(315deg);
     }
@@ -120,18 +114,18 @@
   font-size: 16px;
   margin: 0;
   padding:2px 0px;
-  color: #777; /* Gray color for unselected banks */
+  color: #777;
   cursor: pointer;
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 .bank-item li:hover {
-  color: #1a73e8; /* Lighter blue color on hover */
+  color: #1a73e8;
 }
 
 .bank-item li.active {
-  color: #1a73e8; /* Blue color for the active bank */
+  color: #1a73e8;
   font-weight: 500;
 }
 
@@ -142,12 +136,10 @@
   right: 0;
   bottom: 0px;
   height: 2px;
-  background-color: #1a73e8; /* Blue underline */
+  background-color: #1a73e8;
   border-radius: 2px;
   transition: width 0.3s ease;
 }
-
-/* rightbar */
 .mastery .grad
 {
   width: 100%;
@@ -156,10 +148,121 @@
 }
 .nonGrad
 {
-  margin-top: 110px;
+  margin-top: 30%;
 }
 .nonGrad .nImg img
 {
   width: 130px;
   height: 130px;
+}
+
+
+.bCard {
+  position: relative;
+  height: 300px;
+}
+
+.bcTop {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  z-index: 1;
+}
+
+.bcTopp p:nth-child(2) {
+  rotate: 90deg;
+  letter-spacing: 3px;
+}
+
+.bcBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 2;
+}
+
+.visa {
+  background-color: #f7f7f736;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.overlay1 .overl1 {
+  background: #525050;
+}
+
+.overlay1 .overl2 {
+  background: linear-gradient(135deg, #b3d8ff, #c499ff, #f7c4e8);
+}
+.budget-card {
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.budget-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress {
+  height: 8px;
+  border-radius: 4px;
+}
+.bg-light-blue {
+  background-color: #e7f2ff;
+}
+.bg-blue-light {
+  background-color: #d0e4ff;
+}
+.text-blue {
+  color: #2b6db3;
+}
+.bg-blue {
+  background-color: #2b6db3;
+}
+
+.bg-light-pink {
+  background-color: #ffe6f0;
+}
+.bg-pink-light {
+  background-color: #ffcce1;
+}
+.text-pink {
+  color: #d6336c;
+}
+.bg-pink {
+  background-color: #d6336c;
+}
+
+.bg-light-green {
+  background-color: #e6f9e6;
+}
+.bg-green-light {
+  background-color: #b8e0b8;
+}
+.text-green {
+  color: #239023;
+}
+.bg-green {
+  background-color: #239023;
+}
+
+/* responsiveness */
+@media screen and (max-width: 1400px) {
+  .mastery
+  {
+    display: flex;
+  }
 }
