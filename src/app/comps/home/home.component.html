@@ -1,12 +1,12 @@
-<div class="container-fluid d-flex col-lg-12 p-0">
-    <div class="dashboard  flex-column gap-3 d-flex vh-100 col-lg-8 px-5 py-3 border-end">
-        <div class="d-flex flex-column gap-4 col-lg-12">
+<div class="container-fluid w-100 p-0 position-relative">
+    <div class="dashboard flex-column gap-3 d-flex px-5 py-3  border-end">
+        <div class="d-flex flex-column gap-4 w-100">
             <div class="dashWT lh-1">
                 <p class="fs-2 welcome fw-medium"> Welcome, <span class="name fw-semibold">{{details.name}}!</span></p>
                 <p>Access & Manage your Account and Transactions efficiently</p>
            </div>
            <div class="addbank">
-            <div class="container d-flex gap-3  rounded-4 col-lg-12 justify-content-between p-3 align-top">
+            <div class="add d-flex gap-3  rounded-4 col-lg-12 justify-content-between p-3 align-top">
                 <div class="balProg d-flex gap-3 align-items-center">
                     <div class="bal">
                         <div class="overlay"></div>
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <div class="mastery d-flex flex-column w-100 position-relative">
+    <div class="mastery position-relative">
         <div class="grad"></div>
         <div class="nonGrad w-100 px-2 pb-4 d-flex flex-column gap-2 position-absolute">
             <div class="nImg">
@@ -85,7 +85,7 @@
                   
                       <div class="bcBottom d-flex align-items-center justify-content-between pb-3 m-0 w-100">
                         <div class="col-lg-6">
-                          <p class="m-0 fs-3 fw-semibold ">{{ details.fullname }}</p>
+                          <p class="m-0 fs-4 fw-semibold ">{{ details.fullname }}</p>
                           <p class="m-0 fs-4 ">{{ bankD.accNo }}</p>
                         </div>
                         <div class="col-lg-4">

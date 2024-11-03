@@ -1,16 +1,27 @@
 .container-fluid
 {
-  overflow: hidden;
+  display: flex;
+  /* overflow: hidden; */
+}
+.dashboard
+{
+  width: 70%;
+}
+.mastery
+{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 .welcome .name
 {
   color: var(--bcol);
 }
-.addbank .container
+.addbank .add
 {
     box-shadow:  2px 2px 5px 1px rgba(128, 128, 128, 0.42);
 }
-.bal {
+.bal{
     width: 150px;
     height: 150px;
     font-size: 20px;
@@ -140,6 +151,8 @@
   border-radius: 2px;
   transition: width 0.3s ease;
 }
+
+/* rightbar */
 .mastery .grad
 {
   width: 100%;
@@ -148,7 +161,7 @@
 }
 .nonGrad
 {
-  margin-top: 30%;
+  margin-top: 21%;
 }
 .nonGrad .nImg img
 {
@@ -260,9 +273,17 @@
 }
 
 /* responsiveness */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1750px) {
+  .container-fluid
+  {
+    display: block;
+  }
   .mastery
   {
-    display: flex;
+    display: none;
+  }
+  .dashboard
+  {
+    width: 100%;
   }
 }
