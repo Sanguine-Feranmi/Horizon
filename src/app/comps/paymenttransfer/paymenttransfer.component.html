@@ -1,1 +1,67 @@
-<p>paymenttransfer works!</p>
+<div class="container mt-5">
+  <!-- Header -->
+  <h2 class="fw-bold">Payment Transfer</h2>
+  <p class="text-muted">Please provide any specific details or notes related to the payment transfer</p>
+
+  <!-- Transfer Details Section -->
+  <div class="py-3 border-bottom">
+    <h5 class="fw-semibold">Transfer details</h5>
+    <p class="text-muted">Enter the details of the recipient</p>
+
+    <form>
+      <div class="mb-4 row">
+        <label for="sourceBank" class="col-sm-3 col-form-label text-muted">Select Source Bank</label>
+        <div class="col-sm-9">
+          <select class="form-select" id="sourceBank" aria-label="Select Source Bank">
+            <option selected>Select Account</option>
+            <option value="1">Bank A</option>
+            <option value="2">Bank B</option>
+            <option value="3">Bank C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-4 row">
+        <label for="transferNote" class="col-sm-3 col-form-label text-muted">Transfer Note (Optional)</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" id="transferNote" rows="3" placeholder="Enter your message here...">Dear John,
+I hope this message finds you well. I am transferring $100 to your account for fun. Please confirm once you receive it.</textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bank Account Details Section -->
+  <div class="py-3 border-bottom">
+    <h5 class="fw-semibold">Bank account details</h5>
+    <p class="text-muted">Enter the bank account details of the recipient</p>
+
+    <form>
+      <div class="mb-4 row">
+        <label for="email" class="col-sm-3 col-form-label text-muted">Recipient's Email Address</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="email" placeholder="john@gmail.com">
+        </div>
+      </div>
+
+      <div class="mb-4 row">
+        <label for="accountNumber" class="col-sm-3 col-form-label text-muted">Recipient's Bank Account Number</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="accountNumber" placeholder="Enter the account number">
+        </div>
+      </div>
+
+      <div class="mb-4 row">
+        <label for="amount" class="col-sm-3 col-form-label text-muted">Amount</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="amount" placeholder="40000">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="d-flex justify-content-end mt-4">
+    <button type="button" class="btn btn-primary btn-lg">Transfer Funds</button>
+  </div>
+</div>
